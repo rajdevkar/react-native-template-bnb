@@ -1,0 +1,8 @@
+{
+  "name": "rn-template",
+  "version": "0.0.5",
+  "description": "React Native Template + Tailwind Css",
+  "repository": "git@github.com:rajdevkar/rn-template.git",
+  "author": "Raj Devkar <rajdevkar.6@gmail.com>",
+  "license": "MIT"
+}

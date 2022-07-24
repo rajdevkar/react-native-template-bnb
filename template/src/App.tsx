@@ -1,22 +1,20 @@
-import { SafeAreaView, Text, View } from 'react-native';
-
+import Home from './pages/Home';
 import React from 'react';
-import { useTailwind } from 'tailwind-rn';
+import { RecoilRoot } from 'recoil';
+import Setting from './pages/Setting';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const App = () => {
-  const tailwind = useTailwind();
+const Stack = createNativeStackNavigator();
 
+function App() {
   return (
-    <SafeAreaView style={tailwind('h-full')}>
-      <View style={tailwind('pt-12 items-center')}>
-        <View style={tailwind('bg-blue-200 px-3 py-1 rounded-full')}>
-          <Text style={tailwind('text-blue-800 font-semibold')}>
-            Hello Tailwind
-          </Text>
-        </View>
-      </View>
-    </SafeAreaView>
+    <RecoilRoot>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Setting" component={Setting} />
+      </Stack.Navigator>
+    </RecoilRoot>
   );
-};
+}
 
 export default App;
